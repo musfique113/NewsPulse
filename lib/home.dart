@@ -62,6 +62,39 @@ class _HomeState extends State<Home> {
               ],
             ),
           ),
+          Container(
+            height: 50,
+            child: ListView.builder(
+              shrinkWrap: true,
+              scrollDirection: Axis.horizontal,
+                itemCount: navBarItem.length,
+                itemBuilder : (context, index){
+                  return InkWell(
+                    onTap: (){
+                      print(navBarItem[index]);
+                    },
+                    child: Container(
+                      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                      margin: EdgeInsets.symmetric(horizontal: 5),
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(10)
+                      ),
+                      child: Center(
+                        child: Text(
+                          navBarItem[index],
+                          style: TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
+                }
+            ),
+          )
         ],
       ),
     );
