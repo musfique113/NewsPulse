@@ -1,5 +1,7 @@
 import 'main.dart';
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_controller.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -94,9 +96,41 @@ class _HomeState extends State<Home> {
                   );
                 }
             ),
-          )
+          ),
+
+          CarouselSlider(
+            options : CarouselOptions(
+                height : 200,
+                autoPlay : true,
+                enlargeCenterPage : true
+            ),
+            items : items.map((item) {
+              return Builder(
+                  builder: (BuildContext context){
+                    return InkWell(
+                      onTap: () {
+                        print("carosol taped");
+                      },
+                      child: Container(
+                        margin : EdgeInsets.symmetric(horizontal : 5 , vertical : 14),
+                        decoration: BoxDecoration(
+                            color : item
+                        ),
+                      ),
+                    );
+                  }
+              );
+            }).toList(),
+          ),
+
+
+
         ],
       ),
     );
   }
+  final List itemsX = ['test','test2','test3'];
+  final List items = [Colors.yellowAccent,Colors.red,Colors.blue];
+
+
 }
