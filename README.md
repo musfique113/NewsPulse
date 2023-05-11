@@ -1,6 +1,6 @@
 # newspluse
 
-[![wakatime](https://wakatime.com/badge/user/18368562-fe00-4dd1-a78f-9403210fea47/project/248d20e1-d7e6-45be-81e0-4c337089b8e0.svg)](https://wakatime.com/badge/user/18368562-fe00-4dd1-a78f-9403210fea47/project/248d20e1-d7e6-45be-81e0-4c337089b8e0)
+[![wakatime](https://wakatime.com/badge/user/18368562-fe00-4dd1-a78f-9403210fea47/project/248d20e1-d7e6-45be-81e0-4c337089b8e0.svg)](https://wakatime.com/@musfique113/projects/hywubafihn?start=2023-05-05&end=2023-05-11)
 
 NewsPulse is a dynamic news app built on Flutter that delivers up-to-the-minute news and events from trusted sources worldwide.
 
