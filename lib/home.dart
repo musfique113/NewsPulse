@@ -96,7 +96,7 @@ class _HomeState extends State<Home> {
                       if ((searchController.text).replaceAll(" ", "") == "") {
                         print("Blank search");
                       } else {
-                        // Navigator.push(context, MaterialPageRoute(builder: (context) => Search(searchController.text)));
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => Category(About: searchController.text)));
                       }
                     },
                     child: Container(
@@ -112,6 +112,7 @@ class _HomeState extends State<Home> {
                       controller: searchController,
                       textInputAction: TextInputAction.search,
                       onSubmitted: (value) {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => Category(About: value)));
                         print(value);
                       },
                       decoration: InputDecoration(
