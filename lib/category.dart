@@ -54,9 +54,27 @@ class _CategoryState extends State<Category> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("News+"),
+        title: Text(
+          'News+',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 28,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         centerTitle: true,
-      ),
+        elevation: 0,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.blue.shade900, Colors.blue.shade400],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
+        ),
+      )
+      ,
       body: SingleChildScrollView(
         child: Container(
           child: Column(
