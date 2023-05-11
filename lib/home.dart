@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:http/http.dart';
 
+import 'category.dart';
 import 'model.dart';
 
 class Home extends StatefulWidget {
@@ -18,7 +19,7 @@ class _HomeState extends State<Home> {
   List<NewsQueryModel> newsModelList = <NewsQueryModel>[];
   List<NewsQueryModel> newsModelListCarousel = <NewsQueryModel>[];
 
-  List<String> navBarItem = ["Top News", "World", "Finacnce", "Health"];
+  List<String> navBarItem = ["Top News", "World", "Finance", "Health","Cricket","Bangladesh"];
 
   bool isLoading = true;
 
@@ -124,6 +125,7 @@ class _HomeState extends State<Home> {
                     itemBuilder: (context, index) {
                       return InkWell(
                         onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => Category(About: navBarItem[index])));
                           print(navBarItem[index]);
                         },
                         child: Container(
