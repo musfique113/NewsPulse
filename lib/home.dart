@@ -451,5 +451,4 @@ class _HomeState extends State<Home> {
     );
   }
 
-  final List items = ["test1", "test2", "test3"];
 }
